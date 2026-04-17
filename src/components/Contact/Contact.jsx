@@ -1,20 +1,68 @@
 import { useState } from 'react'
-import { Send, Mail, MessageCircle, ArrowUpRight } from 'lucide-react'
+import { Send, Mail, MessageCircle, ArrowUpRight, Loader2 } from 'lucide-react'
 import './Contact.css'
+
+const TG_BOT_TOKEN = import.meta.env.VITE_TG_BOT_TOKEN
+const TG_CHAT_ID = import.meta.env.VITE_TG_CHAT_ID
+
+async function sendToTelegram({ name, email, message }) {
+    const text = [
+        `📩 *Новая заявка с сайта*`,
+        ``,
+        `👤 *Имя:* ${name}`,
+        `📧 *Email:* ${email}`,
+        ``,
+        `💬 *Сообщение:*`,
+        message,
+    ].join('\n')
+
+    const res = await fetch(
+        `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`,
+        {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: TG_CHAT_ID,
+                text,
+                parse_mode: 'Markdown',
+            }),
+        }
+    )
+
+    if (!res.ok) {
+        throw new Error('Telegram API error')
+    }
+}
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-    const [submitted, setSubmitted] = useState(false)
+    const [status, setStatus] = useState('idle') // idle | sending | success | error
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        // In production, connect to Formspree or similar
-        setSubmitted(true)
-        setTimeout(() => setSubmitted(false), 3000)
+        setStatus('sending')
+
+        try {
+            await sendToTelegram(formData)
+            setStatus('success')
+            setFormData({ name: '', email: '', message: '' })
+            setTimeout(() => setStatus('idle'), 4000)
+        } catch (err) {
+            console.error('Send error:', err)
+            setStatus('error')
+            setTimeout(() => setStatus('idle'), 4000)
+        }
     }
 
     const handleChange = (e) => {
         setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    }
+
+    const buttonContent = {
+        idle: <><span>Отправить</span> <Send size={14} /></>,
+        sending: <><Loader2 size={14} className="spin" /> <span>Отправка...</span></>,
+        success: <span>Отправлено ✓</span>,
+        error: <span>Ошибка, попробуйте ещё раз</span>,
     }
 
     return (
@@ -74,6 +122,7 @@ export default function Contact() {
                                 placeholder="Как вас зовут?"
                                 value={formData.name}
                                 onChange={handleChange}
+                                disabled={status === 'sending'}
                             />
                         </div>
 
@@ -87,6 +136,7 @@ export default function Contact() {
                                 placeholder="ваш@email.com"
                                 value={formData.email}
                                 onChange={handleChange}
+                                disabled={status === 'sending'}
                             />
                         </div>
 
@@ -100,13 +150,16 @@ export default function Contact() {
                                 placeholder="Расскажите о вашем проекте..."
                                 value={formData.message}
                                 onChange={handleChange}
+                                disabled={status === 'sending'}
                             />
                         </div>
 
-                        <button type="submit" className="btn-primary contact__submit">
-                            {submitted ? 'Отправлено ✓' : (
-                                <>Отправить <Send size={14} /></>
-                            )}
+                        <button
+                            type="submit"
+                            className={`btn-primary contact__submit ${status === 'error' ? 'contact__submit--error' : ''}`}
+                            disabled={status === 'sending'}
+                        >
+                            {buttonContent[status]}
                         </button>
                     </form>
                 </div>

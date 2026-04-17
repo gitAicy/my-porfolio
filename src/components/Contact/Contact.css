@@ -147,3 +147,30 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Loading spinner */
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Error state */
+.contact__submit--error {
+    background: #b91c1c;
+}
+
+/* Disabled fields during send */
+.contact__field input:disabled,
+.contact__field textarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contact__submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
