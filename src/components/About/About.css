@@ -23,6 +23,8 @@
 
 .about__visual {
     position: relative;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-xl);
 }
 
 .about__image-wrapper {
@@ -30,6 +32,7 @@
     border-radius: var(--radius-xl);
     overflow: hidden;
     aspect-ratio: 4 / 3;
+    background: var(--color-bg-alt);
 }
 
 .about__image {
@@ -37,6 +40,11 @@
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-slow);
+    filter: grayscale(20%);
+    mix-blend-mode: multiply;
+}
+[data-theme="dark"] .about__image {
+    mix-blend-mode: normal;
 }
 
 .about__image-wrapper:hover .about__image {
@@ -46,19 +54,20 @@
 .about__image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(180deg, transparent 50%, rgba(9, 9, 11, 0.4) 100%);
     z-index: 1;
 }
 
 .about__image-text {
     position: absolute;
-    bottom: 20px;
+    bottom: 24px;
     left: 24px;
     z-index: 2;
-    color: white;
-    font-size: var(--fs-small);
+    color: #ffffff;
+    font-size: var(--fs-label);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     font-weight: 500;
-    opacity: 0.9;
 }
 
 .about__cards {

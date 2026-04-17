@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marketing as an Art Form - Internet Marketer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5f5f62",
+                        "primary-container": "#e2e2e2",
+                        "surface-container-high": "#e4e9ee",
+                        "inverse-primary": "#ffffff",
+                        "error": "#9f403d",
+                        "on-tertiary-container": "#4d4762",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface-variant": "#596065",
+                        "on-primary-fixed": "#3f3f3f",
+                        "tertiary-container": "#dcd2f4",
+                        "on-secondary-container": "#525154",
+                        "secondary-fixed": "#e4e2e5",
+                        "surface": "#f9f9fb",
+                        "on-secondary-fixed-variant": "#5b5b5e",
+                        "tertiary-fixed-dim": "#cec5e5",
+                        "outline-variant": "#acb3b8",
+                        "on-primary-container": "#525252",
+                        "secondary-fixed-dim": "#d6d4d7",
+                        "secondary-dim": "#535356",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-fixed": "#dcd2f4",
+                        "on-surface": "#2d3338",
+                        "surface-container-highest": "#dde3e9",
+                        "primary": "#5e5e5e",
+                        "inverse-on-surface": "#9c9d9f",
+                        "surface-variant": "#dde3e9",
+                        "on-error-container": "#752121",
+                        "inverse-surface": "#0c0e10",
+                        "tertiary-dim": "#564f6b",
+                        "on-tertiary-fixed-variant": "#57506c",
+                        "on-primary-fixed-variant": "#5b5b5b",
+                        "error-dim": "#4e0309",
+                        "surface-container": "#ebeef2",
+                        "on-tertiary-fixed": "#3a344e",
+                        "outline": "#757c81",
+                        "secondary-container": "#e4e2e5",
+                        "surface-bright": "#f9f9fb",
+                        "error-container": "#fe8983",
+                        "on-secondary-fixed": "#3f3f42",
+                        "on-secondary": "#faf8fc",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9fb",
+                        "on-background": "#2d3338",
+                        "surface-tint": "#5e5e5e",
+                        "on-tertiary": "#fdf7ff",
+                        "primary-dim": "#525252",
+                        "primary-fixed-dim": "#d4d4d4",
+                        "surface-dim": "#d3dbe2",
+                        "on-error": "#fff7f6",
+                        "on-primary": "#f8f8f8",
+                        "tertiary": "#625b77"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "sans": ["Inter", "sans-serif"],
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .ambient-shadow:hover { box-shadow: 0 20px 40px rgba(45, 51, 56, 0.04); }
+        .metric-gradient { background: linear-gradient(135deg, #5e5e5e 0%, #525252 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-gradient { background: linear-gradient(135deg, #5e5e5e 0%, #525252 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 glass-nav transition-all duration-300">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 h-16">
+<div class="text-lg font-bold tracking-tighter text-zinc-900 dark:text-white">
+                CURATOR
+            </div>
+<div class="hidden md:flex space-x-8 font-sans tracking-tight text-sm font-medium">
+<a class="text-zinc-900 dark:text-white font-semibold hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#work">Work</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#about">About</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#journal">Journal</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<div class="flex items-center">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-md font-medium text-sm transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:scale-95 btn-gradient">
+                    Connect
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-40 pb-32 px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
+<div class="inline-block px-3 py-1 mb-8 rounded-full bg-surface-container-low text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-on-surface-variant">
+            Internet Marketing Strategist
+        </div>
+<h1 class="text-[3.5rem] leading-tight font-extrabold tracking-[-0.02em] mb-6 max-w-4xl text-on-surface">
+            Marketing as an <span class="text-primary">Art Form</span>
+</h1>
+<p class="text-base md:text-lg leading-[1.6] text-on-surface-variant max-w-2xl mb-12">
+            I craft digital experiences that resonate, convert, and build lasting brand authority. Data is the foundation; creativity is the architecture.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="btn-gradient text-on-primary px-8 py-4 rounded-md font-medium text-base transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:scale-95 shadow-lg shadow-primary/20">
+                View Case Studies
+            </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-md font-medium text-base transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)] hover:scale-95">
+                Our Approach
+            </button>
+</div>
+</header>
+<!-- Metrics Bento Grid -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-8 ambient-shadow transition-shadow duration-300 col-span-1 md:col-span-2 flex flex-col justify-between min-h-[240px]">
+<div class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline mb-4">Total Revenue Generated</div>
+<div class="text-5xl md:text-6xl font-bold tracking-tight text-on-surface metric-gradient">$42M+</div>
+<div class="mt-4 flex items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mr-2 text-primary" data-icon="trending_up">trending_up</span>
+                        Across E-commerce &amp; SaaS sectors in 2023
+                    </div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-8 ambient-shadow transition-shadow duration-300 flex flex-col justify-between min-h-[240px]">
+<div class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline mb-4">Avg. ROAS</div>
+<div class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface">4.8x</div>
+<div class="mt-4 text-sm text-on-surface-variant">Sustained over 24 months</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-8 ambient-shadow transition-shadow duration-300 flex flex-col justify-between min-h-[240px]">
+<div class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline mb-4">Organic Traffic Growth</div>
+<div class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface">+315%</div>
+<div class="mt-4 text-sm text-on-surface-variant">Average increase year-over-year</div>
+</div>
+<!-- Metric 4 Image -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden ambient-shadow transition-shadow duration-300 col-span-1 md:col-span-2 relative min-h-[240px]">
+<img alt="Abstract representation of data growth and analytics on a modern digital screen" class="w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="Abstract representation of data growth and analytics on a modern digital screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7bI8PctWnMuZ8tLP3hebkm9Jr-62YJeKxR11jCKhImbcFUdeFLv9oGrVmmEMo98QgnuAA023WegQy_-DHsKS6ODHMTfouJP-RCAM7X-72OFWcg7PHhV1mJIWdj9wyaHKsu1wQ3c_t89b37OSPCS0VVw3_spHlWhFER6i6-DgznmDaGBEx3HP5zJ58L-L0S1-ao5bqO6OFbwiLNHWjlblPp-UFzpAE_n8KM-3n8M84uidcy_ij1IeaG4-dyccpqy1oP1Hf8j-d4Ns"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 to-transparent p-8 flex flex-col justify-end">
+<h3 class="text-inverse-primary text-xl font-semibold mb-2">Data-Driven Precision</h3>
+<p class="text-inverse-on-surface text-sm max-w-md">Every decision is backed by rigorous analytics, ensuring marketing spend translates directly to measurable growth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+<div>
+<div class="text-sm font-black text-zinc-900 dark:text-zinc-100 mb-6">CURATOR</div>
+<p class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-500 dark:text-zinc-400">
+                    © 2024 Editorial Precision. Built for the Digital Curator.
+                </p>
+</div>
+<div class="flex flex-wrap gap-8 md:justify-end text-[0.6875rem] uppercase tracking-[0.1em] font-medium">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>

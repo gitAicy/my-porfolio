@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom Utilities for Design System specifics */
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        .ambient-shadow:hover {
+            box-shadow: 0 20px 40px rgba(45, 51, 56, 0.04);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5f5f62",
+                        "primary-container": "#e2e2e2",
+                        "surface-container-high": "#e4e9ee",
+                        "inverse-primary": "#ffffff",
+                        "error": "#9f403d",
+                        "on-tertiary-container": "#4d4762",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface-variant": "#596065",
+                        "on-primary-fixed": "#3f3f3f",
+                        "tertiary-container": "#dcd2f4",
+                        "on-secondary-container": "#525154",
+                        "secondary-fixed": "#e4e2e5",
+                        "surface": "#f9f9fb",
+                        "on-secondary-fixed-variant": "#5b5b5e",
+                        "tertiary-fixed-dim": "#cec5e5",
+                        "outline-variant": "#acb3b8",
+                        "on-primary-container": "#525252",
+                        "secondary-fixed-dim": "#d6d4d7",
+                        "secondary-dim": "#535356",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-fixed": "#dcd2f4",
+                        "on-surface": "#2d3338",
+                        "surface-container-highest": "#dde3e9",
+                        "primary": "#5e5e5e",
+                        "inverse-on-surface": "#9c9d9f",
+                        "surface-variant": "#dde3e9",
+                        "on-error-container": "#752121",
+                        "inverse-surface": "#0c0e10",
+                        "tertiary-dim": "#564f6b",
+                        "on-tertiary-fixed-variant": "#57506c",
+                        "on-primary-fixed-variant": "#5b5b5b",
+                        "error-dim": "#4e0309",
+                        "surface-container": "#ebeef2",
+                        "on-tertiary-fixed": "#3a344e",
+                        "outline": "#757c81",
+                        "secondary-container": "#e4e2e5",
+                        "surface-bright": "#f9f9fb",
+                        "error-container": "#fe8983",
+                        "on-secondary-fixed": "#3f3f42",
+                        "on-secondary": "#faf8fc",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9fb",
+                        "on-background": "#2d3338",
+                        "surface-tint": "#5e5e5e",
+                        "on-tertiary": "#fdf7ff",
+                        "primary-dim": "#525252",
+                        "primary-fixed-dim": "#d4d4d4",
+                        "surface-dim": "#d3dbe2",
+                        "on-error": "#fff7f6",
+                        "on-primary": "#f8f8f8",
+                        "tertiary": "#625b77"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-white/70 dark:bg-zinc-950/70 backdrop-blur-xl fixed top-0 w-full z-50 transition-colors duration-300">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 h-16">
+<!-- Brand -->
+<a class="text-lg font-bold tracking-tighter text-zinc-900 dark:text-white hover:opacity-80 transition-opacity" href="#">
+                CURATOR
+            </a>
+<!-- Navigation Links (Web) -->
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-sans tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Work</a>
+<a class="font-sans tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">About</a>
+<!-- Active Navigation Item (closest semantic match to Blog Feed) -->
+<a class="font-sans tracking-tight text-sm font-semibold text-zinc-900 dark:text-white transition-colors duration-300" href="#">Journal</a>
+<a class="font-sans tracking-tight text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Contact</a>
+</div>
+<!-- Trailing Action -->
+<button class="hidden md:flex items-center justify-center px-4 py-2 bg-primary text-on-primary rounded-lg font-sans text-sm font-medium transition-transform hover:scale-95 duration-300" style="transition-timing-function: cubic-bezier(0.2,0,0,1);">
+                Connect
+            </button>
+<!-- Mobile Menu Toggle (Decorative) -->
+<button class="md:hidden text-zinc-900 dark:text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-32 max-w-[1440px] mx-auto px-8">
+<!-- Header & Category Filter -->
+<header class="mb-20 flex flex-col items-center text-center">
+<h1 class="text-5xl md:text-6xl font-headline tracking-tighter text-on-surface mb-12 text-balance">The Editorial Feed</h1>
+<!-- Filter Pills (Lineless design) -->
+<div class="flex flex-wrap justify-center gap-3">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary text-sm font-medium transition-transform hover:scale-95 duration-300" style="transition-timing-function: cubic-bezier(0.2,0,0,1);">All</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container transition-colors duration-300 text-sm font-medium">Strategy</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container transition-colors duration-300 text-sm font-medium">Analysis</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container transition-colors duration-300 text-sm font-medium">Trends</button>
+</div>
+</header>
+<!-- Featured Article (Perspective Project Card Style) -->
+<section class="mb-24">
+<article class="group cursor-pointer grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center bg-surface-container-lowest rounded-2xl p-6 lg:p-8 ambient-shadow transition-all duration-500 ease-out" style="transition-timing-function: cubic-bezier(0.2,0,0,1);">
+<div class="aspect-[4/3] lg:aspect-square rounded-xl overflow-hidden bg-surface-container relative">
+<img alt="Featured image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Abstract architectural composition with strong geometric shadows, clean concrete lines, and deep contrast in black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfN9mKTMNwds3V6wkMMJlGo6cgm-_yt2phOd-IcNnwC43j3BkcmqZ50cNLdTNy0Zk_tZCThOsF2pOwc50Q_QquaY-_KUDTHkpIK_Pad0XICqRCHXJJVUg6GyBRWbZEB_zuwuhKd35yp0YpJjp4DB3WUVtTAes0M6gKU9f_ilbGj3JvZ_nJYGt6-5-jseXCsXb3n-iA3XsSW1n4IALBJ3-X939EQpYW9XZQ2mri4_YReSfRN2GhUWX-JaBm-nuaC9LO6myHHQoiTI4"/>
+</div>
+<div class="flex flex-col pr-4 lg:pr-12">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-primary font-label mb-6 block">Strategy / Featured</span>
+<h2 class="text-3xl md:text-4xl font-headline tracking-tight text-on-surface leading-tight mb-6 group-hover:text-primary transition-colors duration-300 text-balance">The Asymmetry of Modern Information Architecture</h2>
+<p class="text-on-surface-variant text-base md:text-lg leading-relaxed mb-10">An exploration into how breaking the grid can lead to more intuitive and engaging user experiences in complex enterprise environments. We dissect the subtle art of guiding the eye without rigid constraints.</p>
+<div class="mt-auto flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                        Read full analysis
+                        <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1 duration-300">arrow_forward</span>
+</div>
+</div>
+</article>
+</section>
+<!-- The Feed Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+<!-- Standard Card 1 -->
+<article class="group cursor-pointer flex flex-col gap-5">
+<div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container relative">
+<img alt="Article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Minimalist desktop workspace with a smooth gradient background in soft cool grays, featuring organic shapes and a single piece of tech hardware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPlDYg1qlWUtS7e0MoQ39Zp_XFdFLTkvxNXVlSzpMhg4qTeI1kEYVG-1g6fSzV6G94QM_PQeyEc1TV9VzC05Rb16-NWdJcyCZJy3aMPxnYf3ri2NTb2G1DM2pX9Lug9x1t1wAnmJ_rjqyKto3Adtyb4Bj2nM8lb9S0LWMpafR7idu_qzZPoPmYUTGQvfBYqLK0XB3v9vs2M3xqFTzoJ9I_tLV4YmNB-wWaBJl2xw8Y0Km6yqhSG4kiTAAHJjP_PcMSOE7LI143kTA"/>
+</div>
+<div class="flex flex-col flex-grow px-2">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline font-label mb-3">Trends</span>
+<h3 class="text-xl font-headline tracking-tight text-on-surface leading-snug mb-3 group-hover:text-primary transition-colors duration-300 text-balance">Quiet UI: The End of Attention-Seeking Design</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">Why the next generation of digital tools are whispering instead of shouting, prioritizing cognitive ease over visual disruption.</p>
+</div>
+</article>
+<!-- Standard Card 2 -->
+<article class="group cursor-pointer flex flex-col gap-5">
+<div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container relative">
+<img alt="Article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Close up of a premium editorial magazine spread showing typographic details printed on thick matte paper with subtle lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEcQ68pRHEuz1MBgP8vKqj8pqLsiqjFKwlL_G5aoQiTHx3xUIb8u5YbtUsOQ3DTsFLOUmwMVhowB6pj5CBZ9qVNFJC12oJNDtV5UvhBkDTB8_rSEJDoIR34NDXzfFFmFfAu6DWwOPXlTebdjPhWBKivAn3HHUgIytdYCqv8jmxGoSGPctdVZo9w64H55qIKTW8vAoU7frjBWMNCnjVtvHVKFoZdTZYQRQ6xgdoLraU-FQVlPzGOXy4cQz6HQIKQE4nJx60rM6Ecqk"/>
+</div>
+<div class="flex flex-col flex-grow px-2">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline font-label mb-3">Analysis</span>
+<h3 class="text-xl font-headline tracking-tight text-on-surface leading-snug mb-3 group-hover:text-primary transition-colors duration-300 text-balance">Typography as Interface: Beyond Aesthetics</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">Examining how systematic font hierarchy can replace traditional structural elements like borders and backgrounds.</p>
+</div>
+</article>
+<!-- Standard Card 3 -->
+<article class="group cursor-pointer flex flex-col gap-5">
+<div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container relative">
+<img alt="Article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Abstract fluid simulation frozen in time, rendered in monochrome silver and dark charcoal tones, resembling liquid metal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrsSLAowQeH7GElBPaxV--rrP6rTFDRONRfezFrIDL8gBD3T6xj5SohOo_Ajhcc8WsqIHKbtZvGSzipdSf3q3gXBeAfx7vPibBDHUMD7h7f3CgQ5l7eAJqaMmiaSFOMcHkndx3pJ8GZW4W12PdYBO7qJ89UYj-_TM1x5BmabNCMCFhb0DYwK6PPaBjIVZVn2I2cDxUFLBDG1hrhOf_eMQ8buIcbYEpZqwQbz1pqUAlsBbNFraRkRhiz4ZfMMvxpH4izOhA3hEX1ZU"/>
+</div>
+<div class="flex flex-col flex-grow px-2">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline font-label mb-3">Strategy</span>
+<h3 class="text-xl font-headline tracking-tight text-on-surface leading-snug mb-3 group-hover:text-primary transition-colors duration-300 text-balance">Fluid Workflows for Cross-Disciplinary Teams</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">Breaking down silos by designing software that adapts to the user's role rather than forcing a singular path.</p>
+</div>
+</article>
+<!-- Large Asymmetric Card (Spans 2 columns on desktop) -->
+<article class="group cursor-pointer grid grid-cols-1 md:grid-cols-2 gap-8 lg:col-span-2 items-center bg-surface-container-low rounded-2xl p-4 md:p-6 transition-colors hover:bg-surface-container duration-500 ease-out">
+<div class="aspect-[3/2] md:aspect-auto md:h-full rounded-xl overflow-hidden bg-surface-container relative">
+<img alt="Article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Minimalist abstract art piece showing soft overlapping translucent planes of white and pale grey glass, creating gentle depth and ambient shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMg6R9NWE29CZQi5HPsMcdtFB-3FkAWFaWQZD5w9sOouCh_zMLFR_mBbpi2thPjVTkolfqRCMDub123397rHkob4Hzv0RmJnowML7gTwi3bwp231wi0RpD6oBmNCKyw4-MaifFB7N7dW62An7qctO8Xvyn_PjkOxuj3GcelFkJYZXFcgd_AdgQjjWrS-KqsGOOzfhXAvyoLyBqj2ErcTrylCjkYrMM1oFSD--r3iGnosVXkOWphOFHyAXLslbUsJkyiNAU0aobs7o"/>
+</div>
+<div class="flex flex-col justify-center px-4 md:px-8 py-4">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-primary font-label mb-4 block">Analysis / Deep Dive</span>
+<h3 class="text-2xl lg:text-3xl font-headline tracking-tight text-on-surface leading-tight mb-4 group-hover:text-primary transition-colors duration-300 text-balance">The Economics of Minimalist Codebases</h3>
+<p class="text-on-surface-variant text-sm md:text-base leading-relaxed mb-8">Investigating the long-term ROI of adopting stringent design systems and zero-redundancy engineering practices.</p>
+<div class="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                        Read full report
+                        <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1 duration-300">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Standard Card 4 -->
+<article class="group cursor-pointer flex flex-col gap-5">
+<div class="aspect-[16/10] rounded-xl overflow-hidden bg-surface-container relative">
+<img alt="Article thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A single pristine white pebble resting on a smooth surface of finely raked zen garden sand, shot from a high angle with soft diffused light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMGgwKaK8F9vD_kVSJ6cy6LHU_owr9BtHWalxG220mlElzIJRT779YoHHOZRwn49RNC88R5y_PMOjjJI0bb3l1j_7BAs1qio7C6wGDhbvCntQ_M7G1mDs4z79ReLY2ZZgX9A6MuuGq6SjpSEJg-9avPqYbPLT7u4No-WYNMJUXP-uu3aYHTn_-3Oz4GXCcCh4NcOYAhG7x6mBiXPJB5Z5LzcnOxOcqx9l2miUpoigJawCm88oKr28lQU6gadI3stcND6NvkBFxUIA"/>
+</div>
+<div class="flex flex-col flex-grow px-2">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-outline font-label mb-3">Trends</span>
+<h3 class="text-xl font-headline tracking-tight text-on-surface leading-snug mb-3 group-hover:text-primary transition-colors duration-300 text-balance">The Return to Physical Metaphors</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed line-clamp-3">How subtle references to tactile materials like paper and frosted glass are replacing the flat design era.</p>
+</div>
+</article>
+</div>
+<!-- Load More Action -->
+<div class="mt-24 flex justify-center">
+<button class="px-8 py-3 bg-surface-container-high text-on-surface rounded-lg font-sans text-sm font-medium transition-transform hover:bg-surface-container hover:scale-95 duration-300" style="transition-timing-function: cubic-bezier(0.2,0,0,1);">
+                Load More Articles
+            </button>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-zinc-50 dark:bg-zinc-900 w-full py-20 px-8 transition-colors duration-300">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto border-t border-zinc-200/10 pt-16">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-4">
+<span class="text-sm font-black text-zinc-900 dark:text-zinc-100 tracking-tighter">CURATOR</span>
+<p class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-500 dark:text-zinc-400">
+                    © 2024 Editorial Precision. Built for the Digital Curator.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-wrap md:justify-end gap-x-8 gap-y-4">
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all duration-300 opacity-80 hover:opacity-100" href="#">Privacy</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all duration-300 opacity-80 hover:opacity-100" href="#">Terms</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all duration-300 opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all duration-300 opacity-80 hover:opacity-100" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>

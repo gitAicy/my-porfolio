@@ -1,10 +1,10 @@
 .footer {
-    padding: 32px 0;
-    background: var(--color-bg-dark);
-    color: rgba(255,255,255,0.6);
+    padding: 60px 0;
+    background: var(--color-bg-alt);
+    color: var(--color-text-secondary);
     position: relative;
     z-index: 2;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: none;
 }
 
 .footer__inner {
@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 24px;
 }
 
 .footer__brand {
@@ -23,28 +23,33 @@
 
 .footer__logo {
     font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
 }
 
 .footer__brand-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 6px;
 }
 
 .footer__tagline {
-    font-size: var(--fs-small);
-    color: rgba(255,255,255,0.5);
-    font-weight: 500;
+    font-size: var(--fs-label);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .footer__copy {
     font-size: var(--fs-label);
-    color: rgba(255,255,255,0.3);
+    color: var(--color-text-light);
     display: flex;
     align-items: center;
     gap: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .footer__heart {
@@ -55,22 +60,22 @@
 .footer__top-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     padding: 8px 16px;
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius-full);
+    border: none;
     font-family: var(--font-family);
     font-size: var(--fs-label);
     font-weight: 600;
-    color: rgba(255,255,255,0.5);
+    color: var(--color-text-light);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-base);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .footer__top-btn:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
+    color: var(--color-text);
 }
 
 @media (max-width: 640px) {

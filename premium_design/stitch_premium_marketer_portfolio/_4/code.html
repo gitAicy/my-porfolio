@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Digital Curator - Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#5f5f62",
+                        "primary-container": "#e2e2e2",
+                        "surface-container-high": "#e4e9ee",
+                        "inverse-primary": "#ffffff",
+                        "error": "#9f403d",
+                        "on-tertiary-container": "#4d4762",
+                        "surface-container-low": "#f2f4f6",
+                        "on-surface-variant": "#596065",
+                        "on-primary-fixed": "#3f3f3f",
+                        "tertiary-container": "#dcd2f4",
+                        "on-secondary-container": "#525154",
+                        "secondary-fixed": "#e4e2e5",
+                        "surface": "#f9f9fb",
+                        "on-secondary-fixed-variant": "#5b5b5e",
+                        "tertiary-fixed-dim": "#cec5e5",
+                        "outline-variant": "#acb3b8",
+                        "on-primary-container": "#525252",
+                        "secondary-fixed-dim": "#d6d4d7",
+                        "secondary-dim": "#535356",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-fixed": "#dcd2f4",
+                        "on-surface": "#2d3338",
+                        "surface-container-highest": "#dde3e9",
+                        "primary": "#5e5e5e",
+                        "inverse-on-surface": "#9c9d9f",
+                        "surface-variant": "#dde3e9",
+                        "on-error-container": "#752121",
+                        "inverse-surface": "#0c0e10",
+                        "tertiary-dim": "#564f6b",
+                        "on-tertiary-fixed-variant": "#57506c",
+                        "on-primary-fixed-variant": "#5b5b5b",
+                        "error-dim": "#4e0309",
+                        "surface-container": "#ebeef2",
+                        "on-tertiary-fixed": "#3a344e",
+                        "outline": "#757c81",
+                        "secondary-container": "#e4e2e5",
+                        "surface-bright": "#f9f9fb",
+                        "error-container": "#fe8983",
+                        "on-secondary-fixed": "#3f3f42",
+                        "on-secondary": "#faf8fc",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f9f9fb",
+                        "on-background": "#2d3338",
+                        "surface-tint": "#5e5e5e",
+                        "on-tertiary": "#fdf7ff",
+                        "primary-dim": "#525252",
+                        "primary-fixed-dim": "#d4d4d4",
+                        "surface-dim": "#d3dbe2",
+                        "on-error": "#fff7f6",
+                        "on-primary": "#f8f8f8",
+                        "tertiary": "#625b77"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .ambient-shadow { box-shadow: 0 20px 40px rgba(45, 51, 56, 0.04); }
+        .ghost-border { outline: 1px solid rgba(172, 179, 184, 0.15); }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-xl transition-all duration-300 glass-nav border-none">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 h-16">
+<div class="text-lg font-bold tracking-tighter text-zinc-900 dark:text-white font-headline">CURATOR</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-zinc-500 dark:text-zinc-400 font-sans tracking-tight text-sm font-medium hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Work</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-sans tracking-tight text-sm font-medium hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">About</a>
+<a class="text-zinc-900 dark:text-white font-semibold font-sans tracking-tight text-sm transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-zinc-900 dark:after:bg-white" href="#">Journal</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-sans tracking-tight text-sm font-medium hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="md:hidden text-zinc-900 dark:text-white">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<a class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary text-sm font-medium px-4 py-2 rounded-lg hover:scale-[0.98] transition-transform duration-300 cubic-bezier(0.2,0,0,1)" href="#">Connect</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-16 min-h-screen flex flex-col relative bg-surface">
+<!-- Immersive Hero -->
+<header class="w-full relative h-[614px] md:h-[716px] flex items-end pb-12 md:pb-24 px-6 md:px-12 bg-surface-container-low transition-colors duration-500 overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Editorial workspace" class="w-full h-full object-cover object-center opacity-90 scale-105 transform origin-center transition-transform duration-[10s] hover:scale-100" data-alt="Minimalist modern workspace desk with sleek laptop, architectural lamp, and subtle soft natural light streaming through a window creating dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeIfwGOtbqJqEU0DzX2lMeZlxIll61iQExpVicFtGZ8-qSAAmKbePndxiWkdbb_rRLqNMs0aUTS7izZ-BhXPiMOtPrUZwAAfnM0mwUmyTKugOlqB-G2aL9z8HGJhY3amk2fKV-WLNj9zuCiblksjMZaCA-0xGQqMvwDpnZtPGcy2MaU-xniojcdHzd3gWDuqzANb9H4EepHzcnZQLEEVSFS_7iny_QR93iTftXQ-zVcFh4RkXOj_umnoIaGYGtFT4p--8y1Q8dT8c"/>
+<!-- Subtle Gradient Overlay for Text Readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 via-surface-container-highest/20 to-transparent"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-10 md:col-start-2">
+<div class="mb-6 flex items-center gap-3">
+<span class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-on-surface-variant font-label bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1 rounded-full ghost-border">Design Strategy</span>
+<span class="text-sm text-on-surface-variant font-body hidden sm:inline">•</span>
+<span class="text-sm text-on-surface-variant font-body">October 24, 2024</span>
+</div>
+<h1 class="text-4xl md:text-[3.5rem] leading-[1.1] font-bold tracking-[-0.02em] text-on-surface font-headline mb-6 drop-shadow-sm">The Architecture of Silence: Designing for Focus</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-body leading-relaxed max-w-2xl font-light">In an era of relentless notification, the true luxury in digital product design is the intentional absence of noise.</p>
+</div>
+</div>
+</header>
+<!-- Article Body & Sidebar -->
+<section class="flex-grow w-full max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-24 bg-surface transition-colors duration-500">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 relative">
+<!-- Main Text Column -->
+<article class="lg:col-span-7 lg:col-start-2 xl:col-span-6 xl:col-start-3 prose prose-lg prose-zinc max-w-none w-full font-body text-on-surface leading-[1.8]">
+<div class="flex items-center gap-4 mb-12 not-prose">
+<img alt="Author portrait" class="w-12 h-12 rounded-full object-cover ghost-border" data-alt="Black and white portrait of a thoughtful female designer looking away, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT5bTq8M2DqYnL3JuywIM_QCbQCCCIi9ZCGuWvAI5VcDC8lqggSWlW9VdErQP4XTItYKqstonVSmP4mvUrJPUepR_EijCDYKT_eyF97xf0jqpf5Su-w41OkeACKHppXxlTdQjrrLF555V7Qn_9yVakJNrUBk2RTqjv81-s9XdJ5DhVS1jVl184dyuIJwTjcWXefRtUCgeiyIfnmjZefuvfuh_VAVcsDBGHbgXGJ-mdi72K7Hj6mPeMd-xaN-B_GvjZs6LIhFfxWtc"/>
+<div>
+<div class="font-semibold text-base text-on-surface">Elena Rostova</div>
+<div class="text-sm text-on-surface-variant">Principal Designer, Curator Studios</div>
+</div>
+</div>
+<p class="text-xl leading-relaxed text-on-surface-variant mb-8 font-light">We have reached peak interface. The screens we interact with daily are saturated with calls to action, vibrant banners, and structural borders demanding our attention. But what if we removed it all?</p>
+<p>The concept of "The Digital Curator" isn't just an aesthetic choice; it's a functional imperative. When we treat the screen not as a container for data, but as a gallery space for ideas, the way we design fundamentally shifts.</p>
+<h2 class="text-[1.75rem] font-bold tracking-tight mt-16 mb-6 font-headline text-on-surface">The No-Line Rule</h2>
+<p>Consider the humble 1px border. Historically used to separate content regions, it creates subconscious friction. It tells the eye "stop here, something new is beginning." In high-end editorial design, boundaries are implied through spacing and subtle tonal shifts, not explicit lines.</p>
+<blockquote class="border-none pl-0 my-12 relative">
+<span class="absolute -left-8 top-0 text-6xl text-primary-container font-serif opacity-50">"</span>
+<p class="text-2xl font-light leading-snug text-on-surface italic relative z-10">Space is the ultimate luxury indicator. If you think there's enough space, add twenty percent more.</p>
+</blockquote>
+<p>By transitioning a background from a crisp <code>#ffffff</code> surface to a soft <code>#f2f4f6</code> container low, we signal a change in context without jarring the user. This is the essence of layering.</p>
+<h2 class="text-[1.75rem] font-bold tracking-tight mt-16 mb-6 font-headline text-on-surface">Typography as Architecture</h2>
+<p>When lines vanish, typography must carry the structural load. A rigorous typographic hierarchy becomes non-negotiable. We rely on heavy, tightly tracked display faces anchored by vast expanses of whitespace to create a modern, asymmetric balance.</p>
+<!-- Inset Image -->
+<figure class="my-16 not-prose">
+<img alt="Architectural inspiration" class="w-full rounded-lg object-cover h-[400px] mb-4 ambient-shadow" data-alt="Abstract minimalist interior architecture, stark white walls with sharp geometric shadows and warm light spilling across the floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDECcCvB-yUzN6iBDmkYInkjRsoPdJslMWUcBRKK0xEdCOGODMCzKx3RdqCpiUFbDtqb8jOlyOhjTqkoatMED7SKPuYhMcaj30HN6kwHA2VMKmW_AROehoCaBD6R2N6V5Z2tcapWARbY9NnS8us210Zqr6uvaRpCMbpvfHIO-IW0yTttGzN9rBNU2azZ_NoAb2gHaIo6K3BAg-agVDvfQkPogrCpN26-QJn1zOKUm3VCOrclqZ-DVXY0zC7ffeDuKc1FMVyLPrCFFw"/>
+<figcaption class="text-sm text-on-surface-variant font-body text-center">Physical architecture heavily influences our digital layering strategy.</figcaption>
+</figure>
+<p>The interplay between a monolithic <code>3.5rem</code> headline and a modest, heavily tracked <code>0.6875rem</code> metadata label creates tension and interest. It mimics the experience of holding a premium magazine.</p>
+</article>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 xl:col-span-3 space-y-16 lg:sticky lg:top-32 lg:h-max">
+<!-- Newsletter Signup (Bento Style) -->
+<div class="bg-surface-container-low rounded-xl p-8 transition-colors duration-300 ambient-shadow border-none">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 0;">mail</span>
+<h3 class="text-lg font-bold font-headline text-on-surface mb-2">The Curator's Brief</h3>
+<p class="text-sm text-on-surface-variant font-body mb-6 leading-relaxed">Weekly essays on design, architecture, and digital intent. No noise, just signal.</p>
+<form class="space-y-4">
+<div>
+<label class="sr-only" for="email">Email address</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant focus:ring-0 focus:bg-surface-container-lowest focus:outline focus:outline-1 focus:outline-outline-variant/30 transition-all duration-300 font-body" id="email" placeholder="Email address" type="email"/>
+</div>
+<button class="w-full bg-primary text-on-primary font-medium text-sm py-3 rounded-lg hover:bg-primary-dim transition-colors duration-300" type="submit">Subscribe</button>
+</form>
+</div>
+<!-- Related Articles -->
+<div>
+<h3 class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-on-surface-variant font-label mb-6">Further Reading</h3>
+<div class="space-y-8">
+<a class="group block" href="#">
+<div class="text-xs text-on-surface-variant font-body mb-2">September 12, 2024</div>
+<h4 class="text-base font-bold font-headline text-on-surface group-hover:text-primary transition-colors duration-300 leading-tight">Typography in the Age of Spatial Computing</h4>
+</a>
+<a class="group block" href="#">
+<div class="text-xs text-on-surface-variant font-body mb-2">August 05, 2024</div>
+<h4 class="text-base font-bold font-headline text-on-surface group-hover:text-primary transition-colors duration-300 leading-tight">Beyond the Grid: Asymmetric Layout Patterns</h4>
+</a>
+</div>
+</div>
+</aside>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-8 bg-zinc-50 dark:bg-zinc-900 tonal shift from surface to surface-container-low border-none">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto border-t-0">
+<div>
+<div class="text-sm font-black text-zinc-900 dark:text-zinc-100 mb-4 font-headline tracking-tighter">CURATOR</div>
+<div class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 font-label">
+                    © 2024 Editorial Precision. Built for the Digital Curator.
+                </div>
+</div>
+<div class="flex flex-wrap gap-8 md:justify-end items-end">
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">Privacy</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">Terms</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">LinkedIn</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>

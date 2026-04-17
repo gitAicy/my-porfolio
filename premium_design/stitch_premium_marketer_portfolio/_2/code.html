@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Me - Digital Marketer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#5f5f62",
+                      "primary-container": "#e2e2e2",
+                      "surface-container-high": "#e4e9ee",
+                      "inverse-primary": "#ffffff",
+                      "error": "#9f403d",
+                      "on-tertiary-container": "#4d4762",
+                      "surface-container-low": "#f2f4f6",
+                      "on-surface-variant": "#596065",
+                      "on-primary-fixed": "#3f3f3f",
+                      "tertiary-container": "#dcd2f4",
+                      "on-secondary-container": "#525154",
+                      "secondary-fixed": "#e4e2e5",
+                      "surface": "#f9f9fb",
+                      "on-secondary-fixed-variant": "#5b5b5e",
+                      "tertiary-fixed-dim": "#cec5e5",
+                      "outline-variant": "#acb3b8",
+                      "on-primary-container": "#525252",
+                      "secondary-fixed-dim": "#d6d4d7",
+                      "secondary-dim": "#535356",
+                      "primary-fixed": "#e2e2e2",
+                      "tertiary-fixed": "#dcd2f4",
+                      "on-surface": "#2d3338",
+                      "surface-container-highest": "#dde3e9",
+                      "primary": "#5e5e5e",
+                      "inverse-on-surface": "#9c9d9f",
+                      "surface-variant": "#dde3e9",
+                      "on-error-container": "#752121",
+                      "inverse-surface": "#0c0e10",
+                      "tertiary-dim": "#564f6b",
+                      "on-tertiary-fixed-variant": "#57506c",
+                      "on-primary-fixed-variant": "#5b5b5b",
+                      "error-dim": "#4e0309",
+                      "surface-container": "#ebeef2",
+                      "on-tertiary-fixed": "#3a344e",
+                      "outline": "#757c81",
+                      "secondary-container": "#e4e2e5",
+                      "surface-bright": "#f9f9fb",
+                      "error-container": "#fe8983",
+                      "on-secondary-fixed": "#3f3f42",
+                      "on-secondary": "#faf8fc",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#f9f9fb",
+                      "on-background": "#2d3338",
+                      "surface-tint": "#5e5e5e",
+                      "on-tertiary": "#fdf7ff",
+                      "primary-dim": "#525252",
+                      "primary-fixed-dim": "#d4d4d4",
+                      "surface-dim": "#d3dbe2",
+                      "on-error": "#fff7f6",
+                      "on-primary": "#f8f8f8",
+                      "tertiary": "#625b77"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Inter", "sans-serif"
+                      ],
+                      "body": [
+                              "Inter", "sans-serif"
+                      ],
+                      "label": [
+                              "Inter", "sans-serif"
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        /* Ambient Shadow Utility based on Design System */
+        .ambient-shadow {
+            box-shadow: 0 20px 40px rgba(45, 51, 56, 0.04);
+        }
+        .smooth-transition {
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-xl">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-8 h-16">
+<div class="text-lg font-bold tracking-tighter text-zinc-900 dark:text-white font-headline">
+                CURATOR
+            </div>
+<div class="hidden md:flex items-center gap-8 font-sans tracking-tight text-sm font-medium">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Work</a>
+<a class="text-zinc-900 dark:text-white font-semibold" href="#">About</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Journal</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-300" href="#">Contact</a>
+</div>
+<div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-lg text-sm font-medium smooth-transition hover:scale-95 active:scale-95">
+                    Connect
+                </button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24">
+<!-- Hero Section: Editorial Portrait & Intro -->
+<section class="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32">
+<div class="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
+<h1 class="font-headline text-[3.5rem] leading-[1.1] tracking-[-0.02em] text-on-surface mb-8 font-semibold">
+                    Shaping narratives in the noise. A digital practice rooted in clarity.
+                </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl font-body">
+                    I am a digital marketer who believes that attention is a privilege, not a commodity. My approach blends data-driven precision with high-end editorial aesthetics to build brands that don't just speak, but resonate.
+                </p>
+</div>
+<div class="lg:col-span-5 order-1 lg:order-2">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low">
+<!-- Elegant Background Placeholder -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container to-surface opacity-50"></div>
+<!-- Large Portrait Placeholder -->
+<img alt="Professional portrait of a young digital marketer in a minimalist, well-lit studio environment wearing a simple black turtleneck" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply grayscale-[20%] smooth-transition hover:scale-105" data-alt="Professional portrait of a young digital marketer in a minimalist, well-lit studio environment wearing a simple black turtleneck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdyn7vs3sNWxE9jBRpHCYW_lpgJgsJ3C7yn516Pq3bYHhd1a-Sm6uJvckton6BOz_3b48x9BC2oKmK7NtCCeFVsEnY4jzHExICjVxRENB1BMP5FYF69k837GZXa-CDYTtgUarl7YSH3O8-CM7s8q_iej8t80Gt95nbJT003YDsjd2HXAKmrqkYnboXcjZvQMRYjoL67EyQS-NUjaHmzqDztaG3a8j1K0ifFqfdxK5z_JzjVk4XPm6LM0EzPQxihj0NQ1t4C7-ndTI"/>
+</div>
+</div>
+</section>
+<!-- Vision/Philosophy Section (Asymmetric Whitespace) -->
+<section class="bg-surface-container-low py-40 px-8">
+<div class="max-w-5xl mx-auto flex flex-col items-end text-right">
+<span class="font-label text-[0.6875rem] uppercase tracking-[0.1em] text-primary mb-6 block">The Philosophy</span>
+<h2 class="font-headline text-3xl md:text-4xl leading-tight text-on-surface font-medium max-w-3xl">
+                    "Great marketing feels like a curated gallery. It presents only what matters, in the best possible light, leaving the audience feeling enriched rather than targeted."
+                </h2>
+</div>
+</section>
+<!-- Minimalist Timeline Section -->
+<section class="max-w-[1440px] mx-auto px-8 py-32">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+<div class="lg:col-span-1">
+<h3 class="font-headline text-2xl font-semibold text-on-surface sticky top-32">
+                        Trajectory
+                    </h3>
+</div>
+<div class="lg:col-span-3 flex flex-col gap-24">
+<!-- Timeline Item -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 group">
+<div class="md:col-span-1">
+<span class="font-label text-sm text-primary tracking-widest block pt-2">2021 — PRESENT</span>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-headline text-xl font-medium text-on-surface mb-3">Head of Digital Strategy</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                                Leading cross-functional teams to redefine luxury e-commerce experiences. Focused on reducing friction and elevating visual storytelling across all digital touchpoints.
+                            </p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 group">
+<div class="md:col-span-1">
+<span class="font-label text-sm text-primary tracking-widest block pt-2">2018 — 2021</span>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-headline text-xl font-medium text-on-surface mb-3">Senior Campaign Manager</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                                Architected multi-channel campaigns for emerging tech brands. Pioneered a minimalist ad framework that improved engagement by focusing on typographic clarity over visual clutter.
+                            </p>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 group">
+<div class="md:col-span-1">
+<span class="font-label text-sm text-primary tracking-widest block pt-2">2015 — 2018</span>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-headline text-xl font-medium text-on-surface mb-3">Content Strategist</h4>
+<p class="text-on-surface-variant leading-relaxed">
+                                Began the journey in editorial content, learning the power of word choice and narrative structure. Developed brand voices that favored authenticity over volume.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full py-20 px-8 bg-zinc-50 dark:bg-zinc-900 border-t-0">
+<!-- Replaced border with bg tonal shift per design system no-line rule, though JSON asks for it, conflict resolution says use JSON execution for styles, but I will wrap in a div that respects the tonal shift if possible, actually let's stick to JSON strictly for the shared component classes if they are explicit -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto border-t border-zinc-200/10 pt-12">
+<div>
+<div class="text-sm font-black text-zinc-900 dark:text-zinc-100 mb-6 font-headline">
+                    CURATOR
+                </div>
+<p class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 font-label">
+                    © 2024 Editorial Precision. Built for the Digital Curator.
+                </p>
+</div>
+<div class="flex flex-wrap gap-8 md:justify-end items-end">
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">Privacy</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">Terms</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">LinkedIn</a>
+<a class="text-[0.6875rem] uppercase tracking-[0.1em] font-medium text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition-all opacity-80 hover:opacity-100 font-label" href="#">Archive</a>
+</div>
+</div>
+</footer>
+</body></html>
