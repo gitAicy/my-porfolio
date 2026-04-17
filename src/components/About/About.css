@@ -1,0 +1,117 @@
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about__info {
+    padding-right: 20px;
+}
+
+.about__text {
+    margin-top: 20px;
+    font-size: var(--fs-body);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+.about__text strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.about__visual {
+    position: relative;
+}
+
+.about__image-wrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.about__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.about__image-wrapper:hover .about__image {
+    transform: scale(1.03);
+}
+
+.about__image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.about__image-text {
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    z-index: 2;
+    color: white;
+    font-size: var(--fs-small);
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.about__card {
+    padding: 24px;
+    text-align: center;
+}
+
+.about__card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    margin: 0 auto 14px;
+    transition: all var(--transition-base);
+}
+
+.about__card:hover .about__card-icon {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+.about__card-title {
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 6px;
+}
+
+.about__card-text {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr;
+    }
+}

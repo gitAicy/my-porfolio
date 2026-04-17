@@ -1,0 +1,85 @@
+.services__header {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.services__header .section-subtitle {
+    margin: 0 auto;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.services__card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle gradient accent on hover */
+.services__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.services__card:hover::before {
+    transform: scaleX(1);
+}
+
+.services__card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: all var(--transition-base);
+}
+
+.services__card:hover .services__card-icon {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 8px 20px rgba(220, 38, 38, 0.25);
+}
+
+.services__card-title {
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.services__card-text {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,58 @@
+.floating-orbs {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+    animation: orbFloat 25s ease-in-out infinite;
+}
+
+.orb--1 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.2), transparent 70%);
+    top: 10%;
+    right: -5%;
+    animation-duration: 30s;
+}
+
+.orb--2 {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.15), transparent 70%);
+    top: 50%;
+    left: -8%;
+    animation-delay: -5s;
+    animation-duration: 28s;
+}
+
+.orb--3 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(220, 38, 38, 0.12), transparent 70%);
+    top: 80%;
+    right: 10%;
+    animation-delay: -10s;
+    animation-duration: 32s;
+}
+
+@keyframes orbFloat {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(20px, -30px); }
+    50% { transform: translate(-15px, 15px); }
+    75% { transform: translate(10px, 20px); }
+}
+
+/* Reduce on mobile */
+@media (max-width: 768px) {
+    .orb {
+        opacity: 0.08;
+    }
+}

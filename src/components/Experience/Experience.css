@@ -1,0 +1,156 @@
+.experience__header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.experience__header .section-subtitle {
+    margin: 0 auto;
+}
+
+.experience__timeline {
+    position: relative;
+    padding-left: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience__timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--color-border);
+}
+
+.experience__item {
+    position: relative;
+}
+
+.experience__dot {
+    position: absolute;
+    left: -36px;
+    top: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    z-index: 1;
+}
+
+.experience__item--highlight .experience__dot {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.experience__card {
+    padding: 24px;
+}
+
+.experience__card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.experience__company {
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.experience__role {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+}
+
+.experience__period {
+    font-size: var(--fs-label);
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 4px 10px;
+    background: var(--color-primary-muted);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.experience__tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.experience__tasks li {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.experience__tasks li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.experience__education {
+    margin-top: 40px;
+}
+
+.experience__edu-card {
+    padding: 28px;
+    text-align: center;
+}
+
+.experience__edu-title {
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.experience__edu-text {
+    font-size: var(--fs-body);
+    color: var(--color-text-secondary);
+    margin-bottom: 14px;
+}
+
+.experience__certs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .experience__timeline {
+        padding-left: 28px;
+    }
+
+    .experience__dot {
+        left: -28px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .experience__card-top {
+        flex-direction: column;
+    }
+}
