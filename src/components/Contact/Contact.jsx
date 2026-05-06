@@ -66,7 +66,7 @@ export default function Contact() {
     }
 
     return (
-        <section className="section section--dark contact" id="contact">
+        <section className="section section--grey contact" id="contact">
             <div className="container">
                 <div className="contact__header">
                     <span className="section-label">Контакты</span>
