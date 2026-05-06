@@ -7,9 +7,12 @@ const timeline = [
         role: 'Интернет-маркетолог',
         period: 'Март 2024 — Июнь 2025',
         tasks: [
-            'SEO для Google Business Profile и Google Maps',
-            'SMS-маркетинг через МТС Маркетолог',
-            'Техническая автоматизация (ZennoPoster, антидетект-браузеры, прокси)',
+            'Управление рекламным бюджетом 630 000 ₽/мес (Google Карты, SMS, Директ)',
+            'Создание и оптимизация 285 карточек Google Business → 27 точек в ТОП-3',
+            'Снижение ДРР направления с 33% до 8%',
+            'SMS-маркетинг: 700 000–1 100 000 ₽/мес выручки, база 15 000 клиентов',
+            'Автоматизация через ZennoPoster, координация 2 подрядчиков',
+            'Яндекс.Директ: РСЯ-кампании, 5 посадочных страниц',
         ],
         highlight: true,
     },
@@ -18,18 +21,19 @@ const timeline = [
         role: 'Интернет-маркетолог',
         period: 'Сентябрь 2021 — Ноябрь 2022',
         tasks: [
-            'SMM (Instagram, VK)',
-            'Таргетированная реклама Meta',
-            'Аналитика, организация отдела',
+            'Рост группы ВКонтакте с 0 до 1 100 подписчиков',
+            'Таргетированная реклама ВК и Meta: 30–50 лидов/мес по 500 ₽/лид',
+            'Контент-план: 1 пост/день, A/B-тестирование креативов',
+            'Стоимость лида на 20–30% ниже среднерыночной',
         ],
         highlight: false,
     },
     {
-        company: 'Codland',
+        company: 'Кодленд',
         role: 'Менеджер по продажам',
         period: 'Январь 2021 — Май 2021',
         tasks: [
-            'Проведение мастер-классов',
+            'Проведение индивидуальных мастер-классов',
             'Продажа образовательных курсов',
         ],
         highlight: false,
@@ -39,7 +43,7 @@ const timeline = [
         role: 'Менеджер по продажам',
         period: 'Сентябрь 2020 — Декабрь 2020',
         tasks: [
-            'Тёплые звонки',
+            'Обзвон тёплых клиентов',
             'Ведение CRM и работа с базой',
         ],
         highlight: false,
@@ -51,10 +55,10 @@ export default function Experience() {
         <section className="section section--grey experience" id="experience">
             <div className="container">
                 <div className="experience__header">
-                    <span className="section-label">Опыт работы</span>
+                    <span className="section-label">Опыт работы — 3 года 4 месяца</span>
                     <h2 className="section-title">Карьерный путь</h2>
                     <p className="section-subtitle">
-                        От менеджера по продажам до интернет-маркетолога с техническим бэкграундом.
+                        От менеджера по продажам до performance-маркетолога с техническим бэкграундом.
                     </p>
                 </div>
 
@@ -92,8 +96,8 @@ export default function Experience() {
                             <strong>СмолГУ</strong> — Прикладная информатика, физико-математический факультет (2022)
                         </p>
                         <div className="experience__certs">
-                            <span className="ai-tools__tag">Трафик-менеджер (2020)</span>
-                            <span className="ai-tools__tag">Интернет-маркетолог (2019)</span>
+                            <span className="ai-tools__tag">Трафик-менеджер — Точка доступа (2020)</span>
+                            <span className="ai-tools__tag">Интернет-маркетолог — Матвей Северянин (2019)</span>
                         </div>
                     </div>
                 </div>

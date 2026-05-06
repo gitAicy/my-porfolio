@@ -29,7 +29,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                     >
-                        Интернет-маркетолог
+                        Performance-маркетолог
                     </motion.span>
 
                     <motion.h1
@@ -48,8 +48,8 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.5 }}
                     >
-                        Маркетинг, усиленный технологиями. SEO, контекстная реклама,
-                        SMM и AI-автоматизация для роста вашего бизнеса.
+                        Локальное SEO, контекстная реклама, SMS-маркетинг и AI-автоматизация.
+                        Управляю бюджетом 630 000 ₽/мес и генерирую до 1,1 млн ₽ выручки с одного канала.
                     </motion.p>
 
                     <motion.div
@@ -98,8 +98,8 @@ export default function Hero() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.4, duration: 0.5 }}
                         >
-                            <span className="hero__stat-number">3+</span>
-                            <span className="hero__stat-text">года<br />опыта</span>
+                            <span className="hero__stat-number">630K</span>
+                            <span className="hero__stat-text">₽/мес<br />бюджет</span>
                         </motion.div>
 
                         <motion.div
@@ -108,8 +108,8 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.6, duration: 0.5 }}
                         >
-                            <span className="hero__stat-number">TOP-3</span>
-                            <span className="hero__stat-text">локальная<br />выдача</span>
+                            <span className="hero__stat-number">ДРР 8%</span>
+                            <span className="hero__stat-text">с 33%<br />до 8%</span>
                         </motion.div>
                     </div>
                 </motion.div>

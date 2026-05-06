@@ -10,15 +10,15 @@ export default function About() {
                         <span className="section-label">Обо мне</span>
                         <h2 className="section-title">Технический бэкграунд<br />+ маркетинговая экспертиза</h2>
                         <p className="section-subtitle">
-                            Я — интернет-маркетолог с образованием в прикладной информатике.
-                            Этот необычный микс позволяет мне решать маркетинговые задачи на стыке
+                            Интернет-маркетолог с образованием в прикладной информатике.
+                            Этот микс позволяет мне решать маркетинговые задачи на стыке
                             технологий и креатива.
                         </p>
                         <p className="about__text">
                             За <strong>3+ года</strong> я прошёл путь от менеджера по продажам до специалиста,
-                            который создаёт и оптимизирует сотни точек контакта с клиентами,
-                            выводит бизнесы в топ локальной выдачи и снижает стоимость привлечения
-                            в <strong>2 раза</strong>. Я не просто настраиваю рекламу — я строю системы, которые работают.
+                            который управляет бюджетом <strong>630 000 ₽/мес</strong>,
+                            генерирует до <strong>1,1 млн ₽ выручки</strong> с SMS-канала
+                            и снижает ДРР <strong>с 33% до 8%</strong>. Я не просто настраиваю рекламу — я строю системы, которые работают.
                         </p>
                     </div>
 
@@ -44,7 +44,7 @@ export default function About() {
                         </div>
                         <h3 className="about__card-title">Техническая база</h3>
                         <p className="about__card-text">
-                            SQL, автоматизация, ZennoPoster, антидетект-браузеры, API-интеграции
+                            ZennoPoster, Tilda, WordPress, антидетект-браузеры, GTM, AmoCRM
                         </p>
                     </div>
 
@@ -54,7 +54,7 @@ export default function About() {
                         </div>
                         <h3 className="about__card-title">AI-мышление</h3>
                         <p className="about__card-text">
-                            ChatGPT, Claude, Gemini, Grok, Midjourney, Antigravity
+                            Antigravity, Claude Code
                         </p>
                     </div>
 

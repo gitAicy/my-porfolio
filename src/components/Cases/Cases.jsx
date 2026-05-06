@@ -4,9 +4,9 @@ import './Cases.css'
 const cases = [
     { value: 285, suffix: '', label: 'карточек Google Maps', desc: 'Создано и оптимизировано' },
     { value: 27, suffix: '', label: 'точек в TOP-3', desc: 'Локальная выдача Google' },
-    { value: 18, suffix: '%', label: 'ДРР по SMS', desc: 'МТС Маркетолог' },
-    { value: 2, suffix: '×', label: 'снижение стоимости', desc: 'Повторный клиент' },
-    { value: 25, suffix: '%', label: 'ниже рынка', desc: 'Стоимость лида (Bori mebel)' },
+    { value: 8, suffix: '%', label: 'ДРР направления', desc: 'Снижение с 33% до 8%' },
+    { value: 1.1, suffix: ' млн ₽', label: 'выручка/мес', desc: 'SMS-канал (МТС Маркетолог)' },
+    { value: 500, suffix: ' ₽', label: 'стоимость лида', desc: 'На 20–30% ниже рынка' },
 ]
 
 function Counter({ target, suffix, isVisible }) {
@@ -20,9 +20,15 @@ function Counter({ target, suffix, isVisible }) {
         const animate = (now) => {
             const elapsed = now - start
             const progress = Math.min(elapsed / duration, 1)
-            // Ease out cubic for satisfying deceleration
             const eased = 1 - Math.pow(1 - progress, 3)
-            setCount(Math.round(target * eased))
+            const current = target * eased
+
+            // Show decimal for small numbers, integer for large
+            if (target < 10) {
+                setCount(Math.round(current * 10) / 10)
+            } else {
+                setCount(Math.round(current))
+            }
 
             if (progress < 1) requestAnimationFrame(animate)
         }
@@ -80,21 +86,22 @@ export default function Cases() {
                 <div className="cases__details stagger-grid">
                     <div className="card cases__detail-card stagger-item">
                         <h3 className="cases__detail-title">РА Кефир</h3>
-                        <p className="cases__detail-period">Март 2024 — Июнь 2025</p>
+                        <p className="cases__detail-period">Март 2024 — Июнь 2025 · бюджет 630 000 ₽/мес</p>
                         <p className="cases__detail-text">
-                            SEO для Google Business Profile и Google Maps. SMS-маркетинг через МТС Маркетолог.
-                            Техническая автоматизация с ZennoPoster, антидетект-браузерами и прокси.
-                            Создал систему управления 285 карточками, вывел 27 точек в топ-3 локальной выдачи.
+                            Управлял рекламным бюджетом (Google Карты — 300 000 ₽, SMS — 200 000 ₽, Директ — 100 000 ₽).
+                            Создал 285 карточек Google Business, вывел 27 точек в ТОП-3.
+                            Генерировал 700 000–1 100 000 ₽/мес выручки через SMS-канал.
+                            Координировал 2 подрядчиков (веб-дизайнер, SERM-менеджер).
                         </p>
                     </div>
 
                     <div className="card cases__detail-card stagger-item">
                         <h3 className="cases__detail-title">Bori Mebel</h3>
-                        <p className="cases__detail-period">Сентябрь 2021 — Ноябрь 2022</p>
+                        <p className="cases__detail-period">Сентябрь 2021 — Ноябрь 2022 · бюджет ~25 000 ₽/мес</p>
                         <p className="cases__detail-text">
-                            SMM в Instagram и VK, таргетированная реклама в Meta.
-                            Выстроил процессы контент-производства, увеличил вовлечённость аудитории,
-                            снизил стоимость лида на 25% ниже рыночного уровня.
+                            Вырастил группу ВКонтакте с 0 до 1 100 подписчиков.
+                            Привлекал 30–50 лидов/мес по 500 ₽/лид — на 20–30% ниже рынка.
+                            Вёл контент-план: 1 пост/день, A/B-тестирование креативов.
                         </p>
                     </div>
                 </div>

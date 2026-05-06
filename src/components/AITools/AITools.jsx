@@ -1,24 +1,12 @@
-import { Sparkles, Image, Code2, MessageSquare } from 'lucide-react'
+import { Sparkles, Code2 } from 'lucide-react'
 import './AITools.css'
 
 const aiCategories = [
     {
-        icon: MessageSquare,
-        category: 'Текстовые AI',
-        tools: ['ChatGPT', 'Claude', 'Gemini', 'Grok'],
-        desc: 'Генерация контента, копирайтинг, анализ данных, стратегическое планирование, брейнсторм идей',
-    },
-    {
-        icon: Image,
-        category: 'Графические AI',
-        tools: ['Midjourney', 'Nano Banana'],
-        desc: 'Создание визуалов для соцсетей, рекламных креативов, баннеров и иллюстраций',
-    },
-    {
         icon: Code2,
-        category: 'Разработка',
-        tools: ['Antigravity'],
-        desc: 'Создание сайтов и лендингов с помощью AI-ассистента. Этот сайт — живой пример',
+        category: 'Разработка и автоматизация',
+        tools: ['Antigravity', 'Claude Code'],
+        desc: 'Создание сайтов, лендингов, автоматизация маркетинговых процессов. Этот сайт — живой пример',
     },
 ]
 
