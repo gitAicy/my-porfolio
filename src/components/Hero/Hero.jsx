@@ -76,7 +76,7 @@ export default function Hero() {
                     <div className="hero__portrait-wrapper">
                         <div className="hero__portrait-glow" aria-hidden="true" />
                         <img
-                            src="/images/portrait_real.png"
+                            src="/images/my_pho.png"
                             alt="Даниил Мозгин"
                             className="hero__portrait"
                         />
